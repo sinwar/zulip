@@ -6,6 +6,10 @@ import os
 import optparse
 import sys
 
+# check for the venv
+from lib import sanity_check
+sanity_check.check_venv(__file__)
+
 tools_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.dirname(tools_dir)
 sys.path.insert(0, root_dir)

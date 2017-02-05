@@ -12,6 +12,10 @@ import traceback
 
 from six.moves.urllib.parse import urlunparse
 
+# check for the venv
+from lib import sanity_check
+sanity_check.check_venv(__file__)
+
 from tornado import httpclient
 from tornado import httputil
 from tornado import gen
